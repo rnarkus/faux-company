@@ -1,0 +1,95 @@
+body{
+    background: #000 url(http://sylvaingarnot.fr/media/stars.png) repeat top center;
+    z-index: 0;
+}
+.grid-container{
+    .grid-items{
+        text-align: center;
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        min-height: 50vh;
+        max-height:70vh;
+        background-repeat: no-repeat, repeat;
+        background-size: cover;
+        background-position: -20vw -20vw;
+        font-family: 'Roboto', sans-serif;
+        color: white;
+        h1{
+            font-size: 7em;
+            text-align: left;
+            left: 20px;
+            line-height: 10vw;
+            @include tablet-portrait-and-below{line-height:90px;}
+        }
+        h2{
+            font-size: 5vw;
+            opacity: 0.75;
+            margin-top: 5%;
+            margin-bottom: 1%;
+
+
+         overflow: hidden;
+         text-align: center;
+         @include tablet-portrait-and-below{font-size:10vw;}
+        }
+        h2:before,
+        h2:after {
+         background-color: white;
+         content: "";
+         display: inline-block;
+         height: 3px;
+         position: relative;
+         vertical-align: middle;
+         width: 50%;
+        }
+        h2:before {
+         right: 0.5em;
+         margin-left: -50%;
+        }
+        h2:after {
+         left: 0.5em;
+         margin-right: -50%;
+        }
+        .flex-container{
+            width: 100%;
+            margin-bottom: 5%;
+            font-family: 'Roboto Condensed', sans-serif;
+            .flex-item{
+                width: 200px;
+                ul {
+                    text-align: left;
+                    list-style: none;
+                    padding: 0;
+                    margin-left: 20px;
+                }
+            }
+            h3{
+                letter-spacing: 0.2em;
+                border-style: solid;
+                font-size: 1.5em;
+                padding: 5px;
+                border-radius: 5px;
+                box-shadow: 2px 2px 0px 0px;
+                background-color: rgba(0,0,0,0.2)
+            }
+        }
+    }
+    #title{
+        grid-area: item-1;
+
+    }
+    #mars{
+        grid-area: item-2;
+        background-image: url("../img/mars.png");
+        background-blend-mode: exclusion;
+    }
+    #venus{
+        grid-area: item-3;
+        background-image: url("../img/Venus.png");
+    }
+    #europa{
+        grid-area: item-4;
+        background-image: url("../img/europa.png");
+    }
+}

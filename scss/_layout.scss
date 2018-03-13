@@ -1,0 +1,28 @@
+.grid-container{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+
+    grid-template-areas:
+        "item-1 item-2"
+        "item-3 item-4";
+
+    @include tablet-portrait-and-below {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+        "item-1"
+        "item-2"
+        "item-3"
+        "item-4";
+
+    }
+}
+
+.flex-container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    .flex-item{
+        margin: 0 50px 0 50px;
+    }
+}
